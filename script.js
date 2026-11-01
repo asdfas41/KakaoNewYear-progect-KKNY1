@@ -21,7 +21,7 @@ function getDays() {
 function updateDday() {
     const today = new Date();
 
-    // 오늘 날짜 표시
+    // 오늘 날짜 만들기
     const todayText = today.toLocaleDateString("ko-KR", {
         year: "numeric",
         month: "long",
@@ -29,8 +29,10 @@ function updateDday() {
         weekday: "long"
     });
 
+    // 화면에 오늘 날짜 표시
     document.getElementById("today").textContent = todayText;
 
+    // 남은 날짜 계산
     const days = getDays();
 
     const dday = document.getElementById("dday");
@@ -44,7 +46,7 @@ function updateDday() {
         message.textContent = "🎉 새해 복 많이 받아!";
     }
 
-    // 프로필 문구 자동 생성 (오늘 날짜 포함)
+    // 오늘 날짜가 포함된 프로필 문구 만들기
     const profileText = days > 0
         ? `📅 ${todayText} | 🎆 2027년 새해까지 D-${days}!`
         : `📅 ${todayText} | 🎉 새해 복 많이 받아!`;
@@ -64,8 +66,9 @@ async function copyMessage() {
     }
 }
 
-// 실행
+// 웹사이트 실행
 updateDday();
 
+// 복사 버튼 연결
 document.getElementById("copyButton")
     .addEventListener("click", copyMessage);
