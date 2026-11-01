@@ -48,3 +48,10 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+#today {
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: center;
+}
