@@ -55,3 +55,14 @@ button {
     margin: 15px 0;
     text-align: center;
 }
+#today {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: yellow !important;
+    font-size: 22px;
+    background: #263b70;
+    padding: 12px;
+    margin: 15px 0;
+    text-align: center;
+}
