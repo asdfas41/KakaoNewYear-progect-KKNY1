@@ -15,7 +15,19 @@ function getDays() {
     );
 }
 
-function updateDday() {
+    function updateDday() {
+    // 오늘 날짜 표시
+    const today = new Date();
+    const todayElement = document.getElementById("today");
+
+    const dateText = today.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long"
+    });
+
+    todayElement.textContent = dateText;
     const days = getDays();
 
     const dday = document.getElementById("dday");
